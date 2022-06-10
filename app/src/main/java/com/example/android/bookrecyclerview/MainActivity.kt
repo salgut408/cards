@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.android.bookrecyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), BookListListener {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity(), BookListListener {
 
         val mainActivity = this
         binding.recyclerView.apply {
-            layoutManager = GridLayoutManager(applicationContext, 3)
+            layoutManager = StaggeredGridLayoutManager(3, 1)
             adapter = CardAdapter(bookList, mainActivity)
         }
 
@@ -83,6 +84,22 @@ class MainActivity : AppCompatActivity(), BookListListener {
             "Classic children's book"
         )
         bookList.add(book7)
+
+        val book8 = Book(
+            R.drawable.green,
+            "R.L Stine",
+            "Green monsters",
+            "Classic Horror"
+        )
+        bookList.add(book8)
+
+        val book9 = Book(
+            R.drawable.grinch,
+            "Dr. Seuss",
+            "How the grinch stole xmas",
+            "Classic children's book"
+        )
+        bookList.add(book9)
 
 
     }
