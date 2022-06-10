@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    tools:context=".detailActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cover"
+        android:src="@drawable/beast"
+android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/cover" />
+
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title_placeholder_text"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:lines="2"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/author"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/author_place_holder"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:lines="1"
+        android:textStyle="bold"/>
+
+
+
+</LinearLayout>
